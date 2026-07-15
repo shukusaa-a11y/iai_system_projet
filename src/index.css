@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #050A18;
+  color: #E0E0E0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ---- Light theme overrides ---- */
+html[data-theme="light"] body {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+html[data-theme="light"] .aurora-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 0%, rgba(0,212,255,0.15), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 10%, rgba(167,139,250,0.12), transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(34,211,238,0.10), transparent 60%),
+    #f1f5f9;
+}
+
+html[data-theme="light"] .glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(241,245,249,0.9));
+  border: 1px solid rgba(0,212,255,0.25);
+}
+
+html[data-theme="light"] .glass-soft {
+  background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(241,245,249,0.8));
+  border: 1px solid rgba(148,163,184,0.2);
+}
+
+html[data-theme="light"] .glass-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(241,245,249,0.6));
+  border: 1px solid rgba(0,212,255,0.2);
+  backdrop-filter: blur(12px);
+}
+
+html[data-theme="light"] .glass .text-slate-100,
+html[data-theme="light"] .glass-soft .text-slate-100,
+html[data-theme="light"] .glass-card .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .text-slate-400 {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .text-slate-300 {
+  color: #334155 !important;
+}
+
+html[data-theme="light"] .text-slate-500 {
+  color: #64748b !important;
+}
+
+html[data-theme="light"] .bg-white\/5 {
+  background-color: rgba(15,23,42,0.04) !important;
+}
+
+html[data-theme="light"] .bg-white\/10 {
+  background-color: rgba(15,23,42,0.06) !important;
+}
+
+html[data-theme="light"] .bg-deep-900\/60 {
+  background-color: rgba(241,245,249,0.8) !important;
+}
+
+html[data-theme="light"] .bg-deep-900\/70 {
+  background-color: rgba(241,245,249,0.8) !important;
+}
+
+html[data-theme="light"] .border-white\/10 {
+  border-color: rgba(15,23,42,0.1) !important;
+}
+
+html[data-theme="light"] .border-white\/20 {
+  border-color: rgba(15,23,42,0.15) !important;
+}
+
+html[data-theme="light"] ::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00D4FF, rgba(0,212,255,0.4));
+  border-radius: 999px;
+}
+
+/* Aurora background */
+.aurora-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 0%, rgba(0,212,255,0.18), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 10%, rgba(167,139,250,0.15), transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(34,211,238,0.10), transparent 60%),
+    #050A18;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(10,25,60,0.4), rgba(5,10,24,0.6));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.glass-soft {
+  background: linear-gradient(135deg, rgba(10,25,60,0.25), rgba(5,10,24,0.4));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Glassmorphism card for suggestions */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,212,255,0.4);
+  box-shadow: 0 12px 40px rgba(0,212,255,0.25), 0 0 20px rgba(0,212,255,0.15);
+}
+
+.neon-text {
+  background: linear-gradient(135deg, #00D4FF 0%, #a78bfa 60%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shimmer-line {
+  background: linear-gradient(90deg, transparent, rgba(0,212,255,0.6), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}

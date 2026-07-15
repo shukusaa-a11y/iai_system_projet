@@ -1,0 +1,6 @@
+{
+  "template": "iai-vite-react-ts",
+  "name": "IAI System Projet",
+  "version": "1.0.0",
+  "description": "Assistant IA personnel avec mémoire, génération de code et contrôle téléphone"
+}
